@@ -1,0 +1,15 @@
+<h2>New Video</h2>
+
+<%= form_for @changeset, video_path(@conn, :create), fn(f) -> %>
+  <div>
+    Title: <%= text_input f, :title %>
+    <%= error_tag f, :title %>
+  </div>
+  <div>
+    Duration: <%= text_input f, :duration %>
+    <%= error_tag f, :duration %>
+  </div>
+  <div>
+    <%= submit "Create" %>
+  </div>
+<% end %>
